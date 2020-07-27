@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Guess number</title>
+  </head>
+  <body>
+    <h1 class="title">بازی حدس عدد</h1>
+    <span class="line"></span>
+    <div class="container">
+      <div class="stage1">
+        <p class="txt-enter">لطفا ماکسیمم عدد را وارد کنید :</p>
+        <input type="text" class="maxNum" />
+        <button class="start btn btn-outline-success" type="button">
+          start
+        </button>
+      </div>
+      <div class="stage2 hidden">
+        <p class="txt-chanceNum">
+          شما <span class="chanceNum red-color">0</span> بار دیگه فرصت داری!
+        </p>
+        <input type="text" class="guessedNumber" />
+        <button class="guess btn btn-outline-danger">حدس بزن !</button>
+      </div>
+      <div class="guide hidden">
+        <p><span class="guide-blue">.</span>عددی که حدس زدی کوچیکه!</p>
+        <p><span class="guide-red">.</span>عددی که حدس زدی بزرگه!</p>
+      </div>
+      <div class="win hidden green-color dirLtr">
+        <h1>You Win !!! ;)</h1>
+      </div>
+      <div class="lost hidden red-color dirLtr">
+        <h1>You lost !!! :(</h1>
+      </div>
+      <div class="reset">
+        <button class="rstBtn btn btn-warning">دوباره</button>
+        <!-- <button class="rstBtn btn btn-outline-success">راهنما</button> -->
+        <!-- Button to Open the Modal -->
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-toggle="modal"
+          data-target="#myModal"
+        >
+          راهنما
+        </button>
+
+        <!-- The Modal -->
+        <div class="modal" id="myModal">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <!-- Modal Header -->
+              <div class="modal-header">
+                <h4 class="modal-title">راهنمای بازی</h4>
+                <button type="button" class="close" data-dismiss="modal">
+                  &times;
+                </button>
+              </div>
+
+              <!-- Modal body -->
+              <div class="modal-body">
+                توی این بازی اول یه عدد ماکسیمم انتخاب میکنی بعد سیستم به طور رندوم یه عدد بین 0 تا عددی که انتخاب کردی انتخاب میکنه و تو باید اونو حدس بزنی تعداد شانس هات بر اساس عددم ماکسیممی که انتخاب میکنی مشخص میشه موفق باشی !!
+              </div>
+
+              <!-- Modal footer -->
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-danger"
+                  data-dismiss="modal"
+                >
+                  Close
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+      integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>
